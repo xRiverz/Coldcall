@@ -8,10 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var names: UILabel!
+    let name : [String] = [ "Anhar" , "Ahme" , "Rahaf" , "Khaled" , "Rwan" , "Yaser" ]
+    
+    @IBAction func coldcallPressed(_ sender: UIButton) {
+        names.text = name.randomElement()!
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        names.text = "Click Me"
     }
 
 
